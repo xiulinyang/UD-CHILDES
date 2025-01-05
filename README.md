@@ -1,8 +1,5 @@
-# UD-CHILDES  
-
-This repository contains the Universal Dependencies (UD) treebanks derived from CHILDES corpora.   
-The data is available in the provided zip file.
----
+# UD-CHILDES
+This repository contains the Universal Dependencies (UD) treebanks derived from CHILDES corpora. The data is available in the provided zip file.
 
 ## Sources  
 This repository aggregates annotated CHILDES UD treebanks from the following sources:
