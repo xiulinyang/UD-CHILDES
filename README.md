@@ -25,6 +25,7 @@ This repository aggregates annotated CHILDES UD treebanks from the following sou
      - *Violet_Providence*  
    - Source: [Spoken_Parsing](https://github.com/ufcompling/spoken_parsing)  
 
+‼️ Note: Part of the corpora were automatically parsed and did not pass the validation test provided by the [UD tools](https://github.com/UniversalDependencies/tools/blob/master/validate.py).
 
 ## Processing  
 
@@ -50,9 +51,8 @@ This repository aggregates annotated CHILDES UD treebanks from the following sou
     - Capitalized the first letter of each sentence.  
     - Added punctuation where necessary.  
 
-- Note for Eve Corpus:  
-  - Corrected 22 annotation errors where sentences lacked a root node.  
-
+‼️ **Note for All Other Corpora:** The data is sourced from previous work and is not fully manually annotated. To ensure a more coherent dataset, sentences without human annotations were annotated using Stanza. This is indicated in the metadata with `annotate_gold=True/False`.
+‼️ **Note for Eve Corpus:** We filtered out 22 annotation errors where sentences lacked a root node.  
 
 ## Contributors  
 - Adam Corpus: [Lou1sM](https://github.com/Lou1sM)  
