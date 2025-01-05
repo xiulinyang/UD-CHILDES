@@ -1,6 +1,6 @@
 # UD-CHILDES  
 
-This repository contains the Universal Dependencies (UD) treebanks derived from CHILDES corpora. 
+This repository contains the Universal Dependencies (UD) treebanks derived from CHILDES corpora.   
 The data is available in the provided zip file.
 ---
 
@@ -53,8 +53,7 @@ This repository aggregates annotated CHILDES UD treebanks from the following sou
     - Capitalized the first letter of each sentence.  
     - Added punctuation where necessary.  
 
-‼️ **Note for All Other Corpora:** The data is sourced from previous work and is not fully manually annotated. To ensure a more coherent dataset, sentences without human annotations were annotated using Stanza. This is indicated in the metadata with `annotate_gold=True/False`.
-
+‼️ **Note for All Other Corpora:** The data is sourced from previous work and is not fully manually annotated. To ensure a more coherent dataset, sentences without human annotations were annotated using Stanza. This is indicated in the metadata with `annotate_gold=True/False`.  
 ‼️ **Note for Eve Corpus:** We filtered out 22 annotation errors where sentences lacked a root node.  
 
 ## Contributors  
