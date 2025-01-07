@@ -1,6 +1,6 @@
 # UD-CHILDES
-This repository contains the Universal Dependencies (UD) treebanks derived from CHILDES corpora. The data is available in the ```UD_corpora``` folder.
-
+This repository contains the Universal Dependencies (UD) treebanks derived from CHILDES corpora. The data is available in the ```UD_corpora``` folder.  
+Some conllu files are larger than 100M, so if you want to contribute to this dataset, please make sure you have installed [git-lfs](https://git-lfs.com/).
 ## Sources  
 This repository aggregates annotated CHILDES UD treebanks from the following sources:
 
