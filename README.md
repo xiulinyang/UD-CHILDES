@@ -58,10 +58,10 @@ cat amdam_eud.conllu | python validate.py --lang en --max-err=0
 The processing steps are carried out by the script ```adam_data_process.py``` and ```other_data_process.py```. The dependencies can be found in ```requirements.txt```.
 
 ```commandline
-# to process the Adam Corpus
+# to process the Adam Corpus from CHILDES_UD2LF_2
 python adam_data_process.py
 
-# to process other corpora
+# to process other corpora from Parsing_Speech and Spoken_Parsing
 python other_data_process.py PATH_OF_ANNOTATED_CHILDES_CORPUS NAME_OF_THE_CSV_FILE
 ```
 
