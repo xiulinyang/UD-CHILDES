@@ -49,7 +49,7 @@ This repository aggregates annotated CHILDES UD treebanks from the following sou
 
 ```commandline
 git clone https://github.com/UniversalDependencies/tools.git
-cat amdam_eud.conllu | python validate.py --lang en --max-err=0
+cat CONLLU_FILE_PATH | python validate.py --lang en --max-err=0
 ```
 
 ## Processing  
