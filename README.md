@@ -28,7 +28,7 @@ This repository aggregates annotated CHILDES UD treebanks from the following sou
 
 - [ ] Paper: [High-accuracy Annotation and Parsing of CHILDES Trans](https://aclanthology.org/W07-0604.pdf)
   - Data Source: not found
-- [ ] Paper: 
+- [ ] Paper: [Testing the Universal Grammar Hypothesis (NSF)](https://sites.socsci.uci.edu/~lpearl/CoLaLab/TestingUG/index.html)
   - Data Source: [CHILDES Constituency Treebaank](https://sites.socsci.uci.edu/~lpearl/CoLaLab/CHILDESTreebank/childestreebank.html)
   - CHILDES corpora cover:
     - *Adam_Brown* (*Includes trace-annotation, 3to4 and 4up subsections include additional animacy and thematic role annotation*)
