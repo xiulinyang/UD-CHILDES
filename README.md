@@ -108,7 +108,7 @@ Some metadata fields are self-explanatory, but the following require clarificati
   All other metadata originates from the source data we collected.
 
 
-#Citations
+# Citations
 If you find the dataset helpful, please cite the following papers: 
 ```bibtex
 @misc{szubert2024crosslinguisticallyconsistentsemanticsyntactic,
