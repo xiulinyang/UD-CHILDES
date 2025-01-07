@@ -1,1 +1,2 @@
 UD_corpora/Thomas_Thomas_eud.conllu filter=lfs diff=lfs merge=lfs -text
+*.conllu filter=lfs diff=lfs merge=lfs -text
