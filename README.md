@@ -4,15 +4,15 @@ This repository contains the Universal Dependencies (UD) treebanks derived from 
 ## Sources  
 This repository aggregates annotated CHILDES UD treebanks from the following sources:
 
-[x] Paper: [Cross-linguistically Consistent Semantic and Syntactic Annotation of Child-directed Speech](https://arxiv.org/abs/2109.10952) by Ida Szubert, Omri Abend, Nathan Schneider, Samuel Gibbon, Louis Mahon, Sharon Goldwater, and Mark Steedman 
+- [x] Paper: [Cross-linguistically Consistent Semantic and Syntactic Annotation of Child-directed Speech](https://arxiv.org/abs/2109.10952) by Ida Szubert, Omri Abend, Nathan Schneider, Samuel Gibbon, Louis Mahon, Sharon Goldwater, and Mark Steedman 
    - Data Source: [CHILDES_UD2LF_2](https://github.com/Lou1sM/CHILDES_UD2LF_2)  
    - CHILDES corpus: Adam Corpus (from the Brown Corpus) 
 
-[x] Paper: [Dependency Parsing Evaluation for Low-resource Spontaneous Speech](https://aclanthology.org/2021.adaptnlp-1.16/) by Zoey Liu and Emily Prud’hommeaux.
+- [x] Paper: [Dependency Parsing Evaluation for Low-resource Spontaneous Speech](https://aclanthology.org/2021.adaptnlp-1.16/) by Zoey Liu and Emily Prud’hommeaux.
    - Data Source: [Parsing_Speech](https://github.com/zoeyliu18/Parsing_Speech/tree/main)  
    - CHILDES corpus: Eve Corpus (from the Brown corpus)
 
-[x] Paper: [Data-driven Parsing Evaluation for Child-Parent Interactions](https://aclanthology.org/2023.tacl-1.97.pdf) by Zoey Liu and Emily Prud’hommeaux
+- [x] Paper: [Data-driven Parsing Evaluation for Child-Parent Interactions](https://aclanthology.org/2023.tacl-1.97.pdf) by Zoey Liu and Emily Prud’hommeaux
   - Source: [Spoken_Parsing](https://github.com/ufcompling/spoken_parsing)  
   - CHILDES corpora:  
      - *Abe_Kuczaj*  
@@ -26,9 +26,9 @@ This repository aggregates annotated CHILDES UD treebanks from the following sou
      - *Thomas_Thomas*  
      - *Violet_Providence*
 
-[] Paper: [High-accuracy Annotation and Parsing of CHILDES Trans](https://aclanthology.org/W07-0604.pdf)
+- [] Paper: [High-accuracy Annotation and Parsing of CHILDES Trans](https://aclanthology.org/W07-0604.pdf)
   - Data Source: not found
-[] Paper: 
+- [] Paper: 
   - Data Source: [CHILDES Constituency Treebaank](https://sites.socsci.uci.edu/~lpearl/CoLaLab/CHILDESTreebank/childestreebank.html)
   - CHILDES corpora cover:
     - *Adam_Brown* (*Includes trace-annotation, 3to4 and 4up subsections include additional animacy and thematic role annotation*)
