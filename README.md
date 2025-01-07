@@ -94,17 +94,22 @@ write.csv(d_eng_na, "Brown.csv", row.names = FALSE) # the file name of csv
   - Standardized text formatting:  
     - Capitalized the first letter of each sentence.  
     - Added punctuation where necessary.  
-
-‼️ **Note for All Other Corpora:** The data is sourced from previous work and is not fully manually annotated. To ensure a more coherent dataset, sentences without human annotations were annotated using Stanza. This is indicated in the metadata with `annotate_gold=True/False`.  
 ‼️ **Note for Eve Corpus:** We filtered out 22 annotation errors where sentences lacked a root node. 
 
 
-### Meta data explanation
-Some of the meta data information is self explanatory, we explain the following that might be confusing:
-- In all current corpora, ```# childes_toks``` refers to the original tokenized text from the source data while ```# text``` refers to the text that follows the tokenization in the dependency tree presented.
-- Other than that, all other meta information is from the original data source we collected. 
+## Metadata Explanation
+
+Some metadata fields are self-explanatory, but the following require clarification:
+- **Annotation Source:**  
+  For all `.conllu` files except `adam_eud.conllu`, the data originates from previous work and is not entirely manually annotated. Sentences lacking human annotations were annotated using Stanza, indicated in the metadata by `annotate_gold=True/False`.
+- **Tokenization Notes:**  
+  In all current corpora, `# childes_toks` refers to the original tokenized text from the source data, while `# text` represents the tokenization as it appears in the dependency tree.
+- **Additional Metadata:**  
+  All other metadata originates from the source data we collected.
+
 
 #Citations
+If you find the dataset helpful, please cite the following papers: 
 ```bibtex
 @misc{szubert2024crosslinguisticallyconsistentsemanticsyntactic,
       title={Cross-linguistically Consistent Semantic and Syntactic Annotation of Child-directed Speech}, 
