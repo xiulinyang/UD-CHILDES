@@ -1,6 +1,34 @@
 # UD-CHILDES
 This repository contains the Universal Dependencies (UD) treebanks derived from CHILDES corpora. The data is available in the ```UD_corpora``` folder.  
 Some conllu files are larger than 100M, so if you want to contribute to this dataset, please make sure you have installed [git-lfs](https://git-lfs.com/).
+
+## Stats
+| corpus | children     | gold annotation                                                       | speakers | UPOS   | feats         | utterances              | utterances | gold trees | silver trees | tokens                   |
+| ------ | ------------ | --------------------------------------------------------------------- | -------- | ------ | ------------- | ----------------------- | ---------- | ---------- | ------------ | ------------------------ |
+| S+24   | Adam (Brown) | Dependency trees, UPOS; Features are from the original CHILDES corpus | adults   | gold   | converted[^1] | 17,233 (all gold trees) | 17,233     | 17,233     | 0            | 91,114 (all gold trees)  |
+| LP21   | Eve (Brown)  | Dependency trees; others (feats, XPOS, UPOS) are unspecified.         | all      | silver | silver        | 110,251 (2,207 gold)    | 110,251    | 2,207      | 108,044      | 540,816 (8,497 gold)     |
+| LP23   | 10 Children  | Dependency trees; others (feats, XPOS, UPOS) are unspecified.         | all      | silver | silver        | 1,135,591 (34,530 gold) | 1,135,591  | 34,530     | 1,101,061    | 6,629,368 (168,284 gold) |
+[^1]: from CHILDES morphology layer
+
+## LP23  Stats
+
+| CORPUS NAME       | # gold utterances | # gold toks | # silver utterances | # silver toks |
+| ----------------- | ---------------- | ----------- | ------------------ | ------------ |
+| Adam              | 17233            | 91114       | 0                  | 0            |
+| Brown_Eve         | 2207             | 8497        | 108044             | 532319       |
+| Adam_Brown        | 5324             | 24361       | 104949             | 516526       |
+| Sarah_Brown       | 5347             | 23233       | 104926             | 517654       |
+| Abe_kuczaj        | 4167             | 22437       | 38630              | 230489       |
+| Naima_Providence  | 2534             | 14360       | 236350             | 1422543      |
+| Emma_Weist        | 2423             | 13730       | 74825              | 474460       |
+| Violet_Providence | 721              | 1857        | 32801              | 164975       |
+| Thomas_Thomas     | 4240             | 20333       | 313550             | 2039132      |
+| Roman_Weist       | 3653             | 20557       | 73595              | 467633       |
+| Laura_Braunwald   | 4622             | 21079       | 41862              | 205427       |
+| Lily_Providence   | 1499             | 6337        | 79573              | 422245       |
+| LP23 Overall      | 34530            | 168284      | 1101061            | 6461084      |
+
+
 ## Sources  
 This repository aggregates annotated CHILDES UD treebanks from the following sources:
 
