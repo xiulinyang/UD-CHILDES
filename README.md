@@ -32,7 +32,7 @@ Some conllu files are larger than 100M, so if you want to contribute to this dat
 ## Sources  
 This repository aggregates annotated CHILDES UD treebanks from the following sources:
 
-- [x] Paper: [Cross-linguistically Consistent Semantic and Syntactic Annotation of Child-directed Speech]([https://arxiv.org/abs/2109.10952](https://link.springer.com/article/10.1007/s10579-024-09734-y)) by Ida Szubert, Omri Abend, Nathan Schneider, Samuel Gibbon, Louis Mahon, Sharon Goldwater, and Mark Steedman 
+- [x] Paper: [Cross-linguistically Consistent Semantic and Syntactic Annotation of Child-directed Speech](https://link.springer.com/article/10.1007/s10579-024-09734-y) by Ida Szubert, Omri Abend, Nathan Schneider, Samuel Gibbon, Louis Mahon, Sharon Goldwater, and Mark Steedman 
    - Data Source: [CHILDES_UD2LF_2](https://github.com/Lou1sM/CHILDES_UD2LF_2)  
    - CHILDES corpus: Adam Corpus (from the Brown Corpus) 
 
