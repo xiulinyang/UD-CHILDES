@@ -56,22 +56,6 @@ This repository aggregates annotated CHILDES UD treebanks from the following sou
 
 - [ ] Paper: [High-accuracy Annotation and Parsing of CHILDES Trans](https://aclanthology.org/W07-0604.pdf)
   - Data Source: not found
-- [ ] Paper: [Testing the Universal Grammar Hypothesis (NSF)](https://sites.socsci.uci.edu/~lpearl/CoLaLab/TestingUG/index.html)
-  - Data Source: [CHILDES Constituency Treebaank](https://sites.socsci.uci.edu/~lpearl/CoLaLab/CHILDESTreebank/childestreebank.html)
-  - CHILDES corpora cover:
-    - *Adam_Brown* (*Includes trace-annotation, 3to4 and 4up subsections include additional animacy and thematic role annotation*)
-    - *Eve_Brown* (*Includes trace-annotation, animacy, and thematic role annotation*)
-    - *Sarah_Brown*
-    - *HSLLD*: HV1-ER and HV1-MT subsections (*Includes trace-annotation*)
-    - *Soderstrom*
-    - *Suppes*
-    - *Valian* (*Includes trace-annotation, animacy, and thematic role annotation*)
-    - The following only contains child-directed speech utterances containing wh-words
-      - *Bates*
-      - *Bernstein*
-      - *VanHouten/Threes*
-      - *VanHouten/Twos*
-      - *VanKleeck*
 
 ‼️ Note: Part of the corpora were automatically parsed and did not pass the validation test provided by the [UD tools](https://github.com/UniversalDependencies/tools/blob/master/validate.py). You can get the validator errors by running the following command:
 
@@ -113,7 +97,7 @@ write.csv(d_eng_na, "Brown.csv", row.names = FALSE) # the file name of csv
 
 ### Eve and Other Corpora  
 - Feature Extraction:  
-  - Employed STANZA for generating FEATS information.  
+  - Employed STANZA for generating FEATS information. (code see ```other_data_process.py```) 
 
 - Additional Processing Steps:  
   - Integrated non-annotated sentences from the same corpus.  
@@ -129,7 +113,7 @@ write.csv(d_eng_na, "Brown.csv", row.names = FALSE) # the file name of csv
 
 Some metadata fields are self-explanatory, but the following require clarification:
 - **Annotation Source:**  
-  For all `.conllu` files except `adam_eud.conllu`, the data originates from previous work and is not entirely manually annotated. Sentences lacking human annotations were annotated using Stanza, indicated in the metadata by `annotate_gold=True/False`.
+  For all `.conllu` files except `adam_eud.conllu`, the data originates from previous work and is not entirely manually annotated. Sentences lacking human annotations were annotated using Stanza (code see ```other_data_process.py```), indicated in the metadata by `annotate_gold=True/False`.
 - **Tokenization Notes:**  
   In all current corpora, `# childes_toks` refers to the original tokenized text from the source data, while `# text` represents the tokenization as it appears in the dependency tree.
 - **Additional Metadata:**  
@@ -139,14 +123,13 @@ Some metadata fields are self-explanatory, but the following require clarificati
 # Citations
 If you find the dataset helpful, please cite the following papers: 
 ```bibtex
-@misc{szubert2024crosslinguisticallyconsistentsemanticsyntactic,
-      title={Cross-linguistically Consistent Semantic and Syntactic Annotation of Child-directed Speech}, 
-      author={Ida Szubert and Omri Abend and Nathan Schneider and Samuel Gibbon and Louis Mahon and Sharon Goldwater and Mark Steedman},
-      year={2024},
-      eprint={2109.10952},
-      archivePrefix={arXiv},
-      primaryClass={cs.CL},
-      url={https://arxiv.org/abs/2109.10952}, 
+@article{szubert-24,
+	title = {Cross-linguistically consistent semantic and syntactic annotation of child-directed speech},
+	url = {https://doi.org/10.1007/s10579-024-09734-y},
+	journal = {Language Resources and Evaluation},
+	author = {Szubert, Ida and Abend, Omri and Schneider, Nathan and Gibbon, Samuel and Mahon, Louis and Goldwater, Sharon and Steedman, Mark},
+	month = may,
+	year = {2024}
 }
 ```
 ```bibtex
