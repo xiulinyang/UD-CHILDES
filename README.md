@@ -34,7 +34,8 @@ This repository aggregates annotated CHILDES UD treebanks from the following sou
 
 - [x] Paper: [Cross-linguistically Consistent Semantic and Syntactic Annotation of Child-directed Speech](https://link.springer.com/article/10.1007/s10579-024-09734-y) by Ida Szubert, Omri Abend, Nathan Schneider, Samuel Gibbon, Louis Mahon, Sharon Goldwater, and Mark Steedman 
    - Data Source: [CHILDES_UD2LF_2](https://github.com/Lou1sM/CHILDES_UD2LF_2)  
-   - CHILDES corpus: Adam Corpus (from the Brown Corpus) 
+   - CHILDES corpus: Adam Corpus (from the Brown Corpus)
+   - The dataset is built based on the preannotation of [High-accuracy Annotation and Parsing of CHILDES Trans](https://aclanthology.org/W07-0604.pdf)
 
 - [x] Paper: [Dependency Parsing Evaluation for Low-resource Spontaneous Speech](https://aclanthology.org/2021.adaptnlp-1.16/) by Zoey Liu and Emily Prud’hommeaux.
    - Data Source: [Parsing_Speech](https://github.com/zoeyliu18/Parsing_Speech/tree/main)  
@@ -54,8 +55,6 @@ This repository aggregates annotated CHILDES UD treebanks from the following sou
      - *Thomas_Thomas*  
      - *Violet_Providence*
 
-- [ ] Paper: [High-accuracy Annotation and Parsing of CHILDES Trans](https://aclanthology.org/W07-0604.pdf)
-  - Data Source: not found
 
 ‼️ Note: Part of the corpora were automatically parsed and did not pass the validation test provided by the [UD tools](https://github.com/UniversalDependencies/tools/blob/master/validate.py). You can get the validator errors by running the following command:
 
