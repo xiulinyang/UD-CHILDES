@@ -3,11 +3,11 @@ This repository contains the Universal Dependencies (UD) treebanks derived from 
 Some conllu files are larger than 100M, so if you want to contribute to this dataset, please make sure you have installed [git-lfs](https://git-lfs.com/).
 
 ## Stats
-| corpus | children     | gold annotation                                                       | speakers | UPOS   | feats         | utterances              | utterances | gold trees | silver trees | tokens                   |
-| ------ | ------------ | --------------------------------------------------------------------- | -------- | ------ | ------------- | ----------------------- | ---------- | ---------- | ------------ | ------------------------ |
-| S+24   | Adam (Brown) | Dependency trees, UPOS; Features are from the original CHILDES corpus | adults   | gold   | converted[^1] | 17,233 (all gold trees) | 17,233     | 17,233     | 0            | 91,114 (all gold trees)  |
-| LP21   | Eve (Brown)  | Dependency trees; others (feats, XPOS, UPOS) are unspecified.         | all      | silver | silver        | 110,251 (2,207 gold)    | 110,251    | 2,207      | 108,044      | 540,816 (8,497 gold)     |
-| LP23   | 10 Children  | Dependency trees; others (feats, XPOS, UPOS) are unspecified.         | all      | silver | silver        | 1,135,591 (34,530 gold) | 1,135,591  | 34,530     | 1,101,061    | 6,629,368 (168,284 gold) |
+| corpus | children     | gold annotation                                                       | speakers | UPOS   | feats         | utterances              | tokens                   |
+| ------ | ------------ | --------------------------------------------------------------------- | -------- | ------ | ------------- | ----------------------- | ------------------------ |
+| S+24   | Adam (Brown) | Dependency trees, UPOS; features are from the original CHILDES corpus | adults   | gold   | converted[^1] | 17,233 (all gold trees) | 91,114 (all gold trees)  |
+| LP21   | Eve (Brown)  | Dependency trees; others (feats, XPOS, UPOS) are unspecified          | all      | silver | silver        | 110,251 (2,207 gold)    | 540,816 (8,497 gold)     |
+| LP23   | 10 Children  | Dependency trees; others (feats, XPOS, UPOS) are unspecified          | all      | silver | silver        | 1,135,591 (34,530 gold) | 6,629,368 (168,284 gold) |
 [^1]: from CHILDES morphology layer
 
 ## LP23  Stats
@@ -32,16 +32,16 @@ Some conllu files are larger than 100M, so if you want to contribute to this dat
 ## Sources  
 This repository aggregates annotated CHILDES UD treebanks from the following sources:
 
-- [x] Paper: [Cross-linguistically Consistent Semantic and Syntactic Annotation of Child-directed Speech](https://link.springer.com/article/10.1007/s10579-024-09734-y) by Ida Szubert, Omri Abend, Nathan Schneider, Samuel Gibbon, Louis Mahon, Sharon Goldwater, and Mark Steedman 
+- [S+24] Paper: [Cross-linguistically Consistent Semantic and Syntactic Annotation of Child-directed Speech](https://link.springer.com/article/10.1007/s10579-024-09734-y) by Ida Szubert, Omri Abend, Nathan Schneider, Samuel Gibbon, Louis Mahon, Sharon Goldwater, and Mark Steedman 
    - Data Source: [CHILDES_UD2LF_2](https://github.com/Lou1sM/CHILDES_UD2LF_2)  
    - CHILDES corpus: Adam Corpus (from the Brown Corpus)
    - The dataset is built based on the preannotation of [High-accuracy Annotation and Parsing of CHILDES Transcripts](https://aclanthology.org/W07-0604.pdf)
 
-- [x] Paper: [Dependency Parsing Evaluation for Low-resource Spontaneous Speech](https://aclanthology.org/2021.adaptnlp-1.16/) by Zoey Liu and Emily Prud’hommeaux.
+- [LP21] Paper: [Dependency Parsing Evaluation for Low-resource Spontaneous Speech](https://aclanthology.org/2021.adaptnlp-1.16/) by Zoey Liu and Emily Prud’hommeaux.
    - Data Source: [Parsing_Speech](https://github.com/zoeyliu18/Parsing_Speech/tree/main)  
    - CHILDES corpus: Eve Corpus (from the Brown corpus)
 
-- [x] Paper: [Data-driven Parsing Evaluation for Child-Parent Interactions](https://aclanthology.org/2023.tacl-1.97.pdf) by Zoey Liu and Emily Prud’hommeaux
+- [LP23] Paper: [Data-driven Parsing Evaluation for Child-Parent Interactions](https://aclanthology.org/2023.tacl-1.97.pdf) by Zoey Liu and Emily Prud’hommeaux
   - Source: [Spoken_Parsing](https://github.com/ufcompling/spoken_parsing)  
   - CHILDES corpora:  
      - *Abe_Kuczaj*  
@@ -56,7 +56,7 @@ This repository aggregates annotated CHILDES UD treebanks from the following sou
      - *Violet_Providence*
 
 
-‼️ Note: Part of the corpora were automatically parsed and did not pass the validation test provided by the [UD tools](https://github.com/UniversalDependencies/tools/blob/master/validate.py). You can get the validator errors by running the following command:
+‼️ Note: Parts of the corpora are automatically parsed and do not pass the validation test provided by the [UD tools](https://github.com/UniversalDependencies/tools/blob/master/validate.py). You can get the validator errors by running the following command:
 
 ```commandline
 git clone https://github.com/UniversalDependencies/tools.git
