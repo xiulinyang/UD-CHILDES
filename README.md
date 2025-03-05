@@ -1,18 +1,47 @@
 # UD-CHILDES
 This repository contains the Universal Dependencies (UD) treebanks derived from CHILDES corpora. The data is available in the ```UD_corpora``` folder.  
 Some conllu files are larger than 100M, so if you want to contribute to this dataset, please make sure you have installed [git-lfs](https://git-lfs.com/).
+
+## Stats
+| corpus | children     | gold annotation                                                       | speakers | UPOS   | feats         | utterances              | tokens                   |
+| ------ | ------------ | --------------------------------------------------------------------- | -------- | ------ | ------------- | ----------------------- | ------------------------ |
+| S+24   | Adam (Brown) | Dependency trees, UPOS; features are from the original CHILDES corpus | adults   | gold   | converted[^1] | 17,233 (all gold trees) | 91,114 (all gold trees)  |
+| LP21   | Eve (Brown)  | Dependency trees; others (feats, XPOS, UPOS) are unspecified          | all      | silver | silver        | 110,251 (2,207 gold)    | 540,816 (8,497 gold)     |
+| LP23   | 10 Children  | Dependency trees; others (feats, XPOS, UPOS) are unspecified          | all      | silver | silver        | 1,135,591 (34,530 gold) | 6,629,368 (168,284 gold) |
+[^1]: from CHILDES morphology layer
+
+## LP23  Stats
+
+| CORPUS NAME       | # gold utterances | # gold toks | # silver utterances | # silver toks |
+| ----------------- | ---------------- | ----------- | ------------------ | ------------ |
+| Adam              | 17233            | 91114       | 0                  | 0            |
+| Brown_Eve         | 2207             | 8497        | 108044             | 532319       |
+| Adam_Brown        | 5324             | 24361       | 104949             | 516526       |
+| Sarah_Brown       | 5347             | 23233       | 104926             | 517654       |
+| Abe_kuczaj        | 4167             | 22437       | 38630              | 230489       |
+| Naima_Providence  | 2534             | 14360       | 236350             | 1422543      |
+| Emma_Weist        | 2423             | 13730       | 74825              | 474460       |
+| Violet_Providence | 721              | 1857        | 32801              | 164975       |
+| Thomas_Thomas     | 4240             | 20333       | 313550             | 2039132      |
+| Roman_Weist       | 3653             | 20557       | 73595              | 467633       |
+| Laura_Braunwald   | 4622             | 21079       | 41862              | 205427       |
+| Lily_Providence   | 1499             | 6337        | 79573              | 422245       |
+| LP23 Overall      | 34530            | 168284      | 1101061            | 6461084      |
+
+
 ## Sources  
 This repository aggregates annotated CHILDES UD treebanks from the following sources:
 
-- [x] Paper: [Cross-linguistically Consistent Semantic and Syntactic Annotation of Child-directed Speech](https://arxiv.org/abs/2109.10952) by Ida Szubert, Omri Abend, Nathan Schneider, Samuel Gibbon, Louis Mahon, Sharon Goldwater, and Mark Steedman 
+- [S+24] Paper: [Cross-linguistically Consistent Semantic and Syntactic Annotation of Child-directed Speech](https://link.springer.com/article/10.1007/s10579-024-09734-y) by Ida Szubert, Omri Abend, Nathan Schneider, Samuel Gibbon, Louis Mahon, Sharon Goldwater, and Mark Steedman 
    - Data Source: [CHILDES_UD2LF_2](https://github.com/Lou1sM/CHILDES_UD2LF_2)  
-   - CHILDES corpus: Adam Corpus (from the Brown Corpus) 
+   - CHILDES corpus: Adam Corpus (from the Brown Corpus)
+   - The dataset is built based on the preannotation of [High-accuracy Annotation and Parsing of CHILDES Transcripts](https://aclanthology.org/W07-0604.pdf)
 
-- [x] Paper: [Dependency Parsing Evaluation for Low-resource Spontaneous Speech](https://aclanthology.org/2021.adaptnlp-1.16/) by Zoey Liu and Emily Prud’hommeaux.
+- [LP21] Paper: [Dependency Parsing Evaluation for Low-resource Spontaneous Speech](https://aclanthology.org/2021.adaptnlp-1.16/) by Zoey Liu and Emily Prud’hommeaux.
    - Data Source: [Parsing_Speech](https://github.com/zoeyliu18/Parsing_Speech/tree/main)  
    - CHILDES corpus: Eve Corpus (from the Brown corpus)
 
-- [x] Paper: [Data-driven Parsing Evaluation for Child-Parent Interactions](https://aclanthology.org/2023.tacl-1.97.pdf) by Zoey Liu and Emily Prud’hommeaux
+- [LP23] Paper: [Data-driven Parsing Evaluation for Child-Parent Interactions](https://aclanthology.org/2023.tacl-1.97.pdf) by Zoey Liu and Emily Prud’hommeaux
   - Source: [Spoken_Parsing](https://github.com/ufcompling/spoken_parsing)  
   - CHILDES corpora:  
      - *Abe_Kuczaj*  
@@ -26,26 +55,8 @@ This repository aggregates annotated CHILDES UD treebanks from the following sou
      - *Thomas_Thomas*  
      - *Violet_Providence*
 
-- [ ] Paper: [High-accuracy Annotation and Parsing of CHILDES Trans](https://aclanthology.org/W07-0604.pdf)
-  - Data Source: not found
-- [ ] Paper: [Testing the Universal Grammar Hypothesis (NSF)](https://sites.socsci.uci.edu/~lpearl/CoLaLab/TestingUG/index.html)
-  - Data Source: [CHILDES Constituency Treebaank](https://sites.socsci.uci.edu/~lpearl/CoLaLab/CHILDESTreebank/childestreebank.html)
-  - CHILDES corpora cover:
-    - *Adam_Brown* (*Includes trace-annotation, 3to4 and 4up subsections include additional animacy and thematic role annotation*)
-    - *Eve_Brown* (*Includes trace-annotation, animacy, and thematic role annotation*)
-    - *Sarah_Brown*
-    - *HSLLD*: HV1-ER and HV1-MT subsections (*Includes trace-annotation*)
-    - *Soderstrom*
-    - *Suppes*
-    - *Valian* (*Includes trace-annotation, animacy, and thematic role annotation*)
-    - The following only contains child-directed speech utterances containing wh-words
-      - *Bates*
-      - *Bernstein*
-      - *VanHouten/Threes*
-      - *VanHouten/Twos*
-      - *VanKleeck*
 
-‼️ Note: Part of the corpora were automatically parsed and did not pass the validation test provided by the [UD tools](https://github.com/UniversalDependencies/tools/blob/master/validate.py). You can get the validator errors by running the following command:
+‼️ Note: Parts of the corpora are automatically parsed and do not pass the validation test provided by the [UD tools](https://github.com/UniversalDependencies/tools/blob/master/validate.py). You can get the validator errors by running the following command:
 
 ```commandline
 git clone https://github.com/UniversalDependencies/tools.git
@@ -85,7 +96,7 @@ write.csv(d_eng_na, "Brown.csv", row.names = FALSE) # the file name of csv
 
 ### Eve and Other Corpora  
 - Feature Extraction:  
-  - Employed STANZA for generating FEATS information.  
+  - Employed STANZA for generating FEATS information. (code see ```other_data_process.py```) 
 
 - Additional Processing Steps:  
   - Integrated non-annotated sentences from the same corpus.  
@@ -101,7 +112,7 @@ write.csv(d_eng_na, "Brown.csv", row.names = FALSE) # the file name of csv
 
 Some metadata fields are self-explanatory, but the following require clarification:
 - **Annotation Source:**  
-  For all `.conllu` files except `adam_eud.conllu`, the data originates from previous work and is not entirely manually annotated. Sentences lacking human annotations were annotated using Stanza, indicated in the metadata by `annotate_gold=True/False`.
+  For all `.conllu` files except `adam_eud.conllu`, the data originates from previous work and is not entirely manually annotated. Sentences lacking human annotations were annotated using Stanza (code see ```other_data_process.py```), indicated in the metadata by `annotate_gold=True/False`.
 - **Tokenization Notes:**  
   In all current corpora, `# childes_toks` refers to the original tokenized text from the source data, while `# text` represents the tokenization as it appears in the dependency tree.
 - **Additional Metadata:**  
@@ -111,14 +122,13 @@ Some metadata fields are self-explanatory, but the following require clarificati
 # Citations
 If you find the dataset helpful, please cite the following papers: 
 ```bibtex
-@misc{szubert2024crosslinguisticallyconsistentsemanticsyntactic,
-      title={Cross-linguistically Consistent Semantic and Syntactic Annotation of Child-directed Speech}, 
-      author={Ida Szubert and Omri Abend and Nathan Schneider and Samuel Gibbon and Louis Mahon and Sharon Goldwater and Mark Steedman},
-      year={2024},
-      eprint={2109.10952},
-      archivePrefix={arXiv},
-      primaryClass={cs.CL},
-      url={https://arxiv.org/abs/2109.10952}, 
+@article{szubert-24,
+	title = {Cross-linguistically consistent semantic and syntactic annotation of child-directed speech},
+	url = {https://doi.org/10.1007/s10579-024-09734-y},
+	journal = {Language Resources and Evaluation},
+	author = {Szubert, Ida and Abend, Omri and Schneider, Nathan and Gibbon, Samuel and Mahon, Louis and Goldwater, Sharon and Steedman, Mark},
+	month = may,
+	year = {2024}
 }
 ```
 ```bibtex
