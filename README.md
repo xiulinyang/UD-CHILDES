@@ -1,6 +1,5 @@
 # UD-CHILDES
-This repository contains the Universal Dependencies (UD) treebanks derived from CHILDES corpora. The data is available in the ```UD_corpora``` folder.  
-Some conllu files are larger than 100M, so if you want to contribute to this dataset, please make sure you have installed [git-lfs](https://git-lfs.com/).
+This repository contains the Universal Dependencies (UD) **silver** treebanks derived from CHILDES corpora. The data is available in the ```silver_data``` folder. As using ```lfs``` to download the treebank might not work due to the quota issue, we upload the zip file to the folder. 
 
 ## Stats
 | corpus | children     | gold annotation                                                       | speakers | UPOS   | feats         | utterances              | tokens                   |
