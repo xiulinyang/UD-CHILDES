@@ -1,61 +1,26 @@
-# UD-CHILDES
+# UD-CHILDES (silver)
 This repository contains the Universal Dependencies (UD) **silver** treebanks derived from CHILDES corpora. The data is available in the ```silver_data``` folder. As using ```lfs``` to download the treebank might not work due to the quota issue, we upload the zip file to the folder. 
 
+You can get the gold UD CHILDES treebank from [UD_English-CHILDES](https://github.com/UniversalDependencies/UD_English-CHILDES).
+
 ## Stats
-| corpus | children     | gold annotation                                                       | speakers | UPOS   | feats         | utterances              | tokens                   |
-| ------ | ------------ | --------------------------------------------------------------------- | -------- | ------ | ------------- | ----------------------- | ------------------------ |
-| S+24   | Adam (Brown) | Dependency trees, UPOS; features are from the original CHILDES corpus | adults   | gold   | converted[^1] | 17,233 (all gold trees) | 91,114 (all gold trees)  |
-| LP21   | Eve (Brown)  | Dependency trees; others (feats, XPOS, UPOS) are unspecified          | all      | silver | silver        | 110,251 (2,207 gold)    | 540,816 (8,497 gold)     |
-| LP23   | 10 Children  | Dependency trees; others (feats, XPOS, UPOS) are unspecified          | all      | silver | silver        | 1,135,591 (34,530 gold) | 6,629,368 (168,284 gold) |
-[^1]: from CHILDES morphology layer
-
-## LP23  Stats
-
-| CORPUS NAME       | # gold utterances | # gold toks | # silver utterances | # silver toks |
-| ----------------- | ---------------- | ----------- | ------------------ | ------------ |
-| Adam              | 17233            | 91114       | 0                  | 0            |
-| Brown_Eve         | 2207             | 8497        | 108044             | 532319       |
-| Adam_Brown        | 5324             | 24361       | 104949             | 516526       |
-| Sarah_Brown       | 5347             | 23233       | 104926             | 517654       |
-| Abe_kuczaj        | 4167             | 22437       | 38630              | 230489       |
-| Naima_Providence  | 2534             | 14360       | 236350             | 1422543      |
-| Emma_Weist        | 2423             | 13730       | 74825              | 474460       |
-| Violet_Providence | 721              | 1857        | 32801              | 164975       |
-| Thomas_Thomas     | 4240             | 20333       | 313550             | 2039132      |
-| Roman_Weist       | 3653             | 20557       | 73595              | 467633       |
-| Laura_Braunwald   | 4622             | 21079       | 41862              | 205427       |
-| Lily_Providence   | 1499             | 6337        | 79573              | 422245       |
-| LP23 Overall      | 34530            | 168284      | 1101061            | 6461084      |
+| Child  | Corpus      | Child age range     |  Silver sents | Silver toks |
+|--------|-------------|---------------------|------------|-------------|
+| Laura  | Braunwald  | 1;3–7;0 (1;3–7;0)    | 41,862       | 205,427     |
+| Adam   | Brown         | 1;6–5;2 (1;6–5;2)     | 93,315       | 452,348     |
+| Eve    | Brown                     | 1;6–5;1 (1;6–5;2)   | 108,044      | 532,319     |
+| Abe    | Kuczaj     | 2;4–5;0 (2;4–5;0)   | 38,630       | 230,489     |
+| Sarah  | Brown                     | 1;6–5;2 (1;6–5;2)    | 104,926      | 517,654     |
+| Lily   | Providence   | 0;11–4;0 (0;11–4;0)   | 79,573       | 422,245     |
+| Naima  | Providence                | 1;3–3;11 (0;11–4;0)    | 236,350      | 1,422,543   |
+| Violet | Providence                | 0;11–4;0 (0;11–4;0) | 32,801       | 164,975     |
+| Thomas | Thomas     | 2;0–4;11 (2;0–4;11) | 313,550      | 2,039,132   |
+| Emma   | Weist      | 2;2–4;10 (2;1–5;0)   | 74,825       | 474,460     |
+| Roman  | Weist                     | 2;2–4;9 (2;1–5;0)    | 73,595       | 467,633     |
+| Overall| NA| NA| 1,197,471|6,892,314|
 
 
-## Sources  
-This repository aggregates annotated CHILDES UD treebanks from the following sources:
-
-- [S+24] Paper: [Cross-linguistically Consistent Semantic and Syntactic Annotation of Child-directed Speech](https://link.springer.com/article/10.1007/s10579-024-09734-y) by Ida Szubert, Omri Abend, Nathan Schneider, Samuel Gibbon, Louis Mahon, Sharon Goldwater, and Mark Steedman 
-   - Data Source: [CHILDES_UD2LF_2](https://github.com/Lou1sM/CHILDES_UD2LF_2)  
-   - CHILDES corpus: Adam Corpus (from the Brown Corpus)
-   - The dataset is built based on the preannotation of [High-accuracy Annotation and Parsing of CHILDES Transcripts](https://aclanthology.org/W07-0604.pdf)
-
-- [LP21] Paper: [Dependency Parsing Evaluation for Low-resource Spontaneous Speech](https://aclanthology.org/2021.adaptnlp-1.16/) by Zoey Liu and Emily Prud’hommeaux.
-   - Data Source: [Parsing_Speech](https://github.com/zoeyliu18/Parsing_Speech/tree/main)  
-   - CHILDES corpus: Eve Corpus (from the Brown corpus)
-
-- [LP23] Paper: [Data-driven Parsing Evaluation for Child-Parent Interactions](https://aclanthology.org/2023.tacl-1.97.pdf) by Zoey Liu and Emily Prud’hommeaux
-  - Source: [Spoken_Parsing](https://github.com/ufcompling/spoken_parsing)  
-  - CHILDES corpora:  
-     - *Abe_Kuczaj*  
-     - *Adam_Brown*  
-     - *Emma_Weist*  
-     - *Laura_Braunwald*  
-     - *Lily_Providence*  
-     - *Naima_Providence*  
-     - *Roman_Weist*  
-     - *Sarah_Brown*  
-     - *Thomas_Thomas*  
-     - *Violet_Providence*
-
-
-‼️ Note: Parts of the corpora are automatically parsed and do not pass the validation test provided by the [UD tools](https://github.com/UniversalDependencies/tools/blob/master/validate.py). You can get the validator errors by running the following command:
+‼️ Note: The treebank is silver so it does not pass the validation test provided by the [UD tools](https://github.com/UniversalDependencies/tools/blob/master/validate.py). You can get the validator errors by running the following command:
 
 ```commandline
 git clone https://github.com/UniversalDependencies/tools.git
@@ -134,6 +99,31 @@ Xiulin Yang, Zhuoxuan Ju, Lanni Bu, Zoey Liu, Nathan Schneider (2025). [UD-Engli
       url={https://arxiv.org/abs/2504.20304},
 }
 ```
+## Sources  
+This repository aggregates annotated CHILDES UD treebanks from the following sources:
+
+- [S+24] Paper: [Cross-linguistically Consistent Semantic and Syntactic Annotation of Child-directed Speech](https://link.springer.com/article/10.1007/s10579-024-09734-y) by Ida Szubert, Omri Abend, Nathan Schneider, Samuel Gibbon, Louis Mahon, Sharon Goldwater, and Mark Steedman 
+   - Data Source: [CHILDES_UD2LF_2](https://github.com/Lou1sM/CHILDES_UD2LF_2)  
+   - CHILDES corpus: Adam Corpus (from the Brown Corpus)
+   - The dataset is built based on the preannotation of [High-accuracy Annotation and Parsing of CHILDES Transcripts](https://aclanthology.org/W07-0604.pdf)
+
+- [LP21] Paper: [Dependency Parsing Evaluation for Low-resource Spontaneous Speech](https://aclanthology.org/2021.adaptnlp-1.16/) by Zoey Liu and Emily Prud’hommeaux.
+   - Data Source: [Parsing_Speech](https://github.com/zoeyliu18/Parsing_Speech/tree/main)  
+   - CHILDES corpus: Eve Corpus (from the Brown corpus)
+
+- [LP23] Paper: [Data-driven Parsing Evaluation for Child-Parent Interactions](https://aclanthology.org/2023.tacl-1.97.pdf) by Zoey Liu and Emily Prud’hommeaux
+  - Source: [Spoken_Parsing](https://github.com/ufcompling/spoken_parsing)  
+  - CHILDES corpora:  
+     - *Abe_Kuczaj*  
+     - *Adam_Brown*  
+     - *Emma_Weist*  
+     - *Laura_Braunwald*  
+     - *Lily_Providence*  
+     - *Naima_Providence*  
+     - *Roman_Weist*  
+     - *Sarah_Brown*  
+     - *Thomas_Thomas*  
+     - *Violet_Providence*
 
 # Acknowledgments
 
