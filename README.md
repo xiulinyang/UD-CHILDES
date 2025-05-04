@@ -119,52 +119,23 @@ Some metadata fields are self-explanatory, but the following require clarificati
 
 
 # Citations
-If you find the dataset helpful, please cite the following papers: 
-```bibtex
-@article{szubert-24,
-	title = {Cross-linguistically consistent semantic and syntactic annotation of child-directed speech},
-	url = {https://doi.org/10.1007/s10579-024-09734-y},
-	journal = {Language Resources and Evaluation},
-	author = {Szubert, Ida and Abend, Omri and Schneider, Nathan and Gibbon, Samuel and Mahon, Louis and Goldwater, Sharon and Steedman, Mark},
-	month = may,
-	year = {2024}
+The creation of this unified resource is detailed in:
+
+Xiulin Yang, Zhuoxuan Ju, Lanni Bu, Zoey Liu, Nathan Schneider (2025). [UD-English-CHILDES: A Collected Resource of Gold and Silver Universal Dependencies Trees for Child Language Interactions](https://arxiv.org/abs/2504.20304). arXiv preprint.
+
+```
+@misc{yang2025udenglishchildescollectedresourcegold,
+      title={UD-English-CHILDES: A Collected Resource of Gold and Silver Universal Dependencies Trees for Child Language Interactions},
+      author={Xiulin Yang and Zhuoxuan Ju and Lanni Bu and Zoey Liu and Nathan Schneider},
+      year={2025},
+      eprint={2504.20304},
+      archivePrefix={arXiv},
+      primaryClass={cs.CL},
+      url={https://arxiv.org/abs/2504.20304},
 }
 ```
-```bibtex
-@inproceedings{liu-prudhommeaux-2021-dependency,
-    title = "Dependency Parsing Evaluation for Low-resource Spontaneous Speech",
-    author = "Liu, Zoey  and
-      Prud{'}hommeaux, Emily",
-    editor = "Ben-David, Eyal  and
-      Cohen, Shay  and
-      McDonald, Ryan  and
-      Plank, Barbara  and
-      Reichart, Roi  and
-      Rotman, Guy  and
-      Ziser, Yftah",
-    booktitle = "Proceedings of the Second Workshop on Domain Adaptation for NLP",
-    month = apr,
-    year = "2021",
-    address = "Kyiv, Ukraine",
-    publisher = "Association for Computational Linguistics",
-    url = "https://aclanthology.org/2021.adaptnlp-1.16/",
-    pages = "156--165",
-    abstract = "How well can a state-of-the-art parsing system, developed for the written domain, perform when applied to spontaneous speech data involving different interlocutors? This study addresses this question in a low-resource setting using child-parent conversations from the CHILDES databse. Specifically, we focus on dependency parsing evaluation for utterances of one specific child (18 - 27 months) and her parents. We first present a semi-automatic adaption of the dependency annotation scheme in CHILDES to that of the Universal Dependencies project, an annotation style that is more commonly applied in dependency parsing. Our evaluation demonstrates that an outof-domain biaffine parser trained only on written texts performs well with parent speech. There is, however, much room for improvement on child utterances, particularly at 18 and 21 months, due to cases of omission and repetition that are prevalent in child speech. By contrast, parsers trained or fine-tuned with in-domain spoken data on a much smaller scale can achieve comparable results for parent speech and improve the weak parsing performance for child speech at these earlier ages"
-}
-```
-```bibtex
-@article{liu-prudhommeaux-2023-data,
-    title = "Data-driven Parsing Evaluation for Child-Parent Interactions",
-    author = "Liu, Zoey  and
-      Prud{'}hommeaux, Emily",
-    journal = "Transactions of the Association for Computational Linguistics",
-    volume = "11",
-    year = "2023",
-    address = "Cambridge, MA",
-    publisher = "MIT Press",
-    url = "https://aclanthology.org/2023.tacl-1.97/",
-    doi = "10.1162/tacl_a_00624",
-    pages = "1734--1753",
-    abstract = "We present a syntactic dependency treebank for naturalistic child and child-directed spoken English. Our annotations largely follow the guidelines of the Universal Dependencies project (UD [Zeman et al., 2022]), with detailed extensions to lexical and syntactic structures unique to spontaneous spoken language, as opposed to written texts or prepared speech. Compared to existing UD-style spoken treebanks and other dependency corpora of child-parent interactions specifically, our dataset is much larger (44,744 utterances; 233,907 words) and contains data from 10 children covering a wide age range (18{--}66 months). We conduct thorough dependency parser evaluations using both graph-based and transition-based parsers, trained on three different types of out-of-domain written texts: news, tweets, and learner data. Out-of-domain parsers demonstrate reasonable performance for both child and parent data. In addition, parser performance for child data increases along children`s developmental paths, especially between 18 and 48 months, and gradually approaches the performance for parent data. These results are further validated with in-domain training."
-}
-```
+
+# Acknowledgments
+
+We acknowledge Ida Szubert, Omri Abend, Samuel Gibbon, Louis Mahon, Sharon Goldwater, Mark Steedman, and Emily Prud’hommeaux for their contributions to the original UD treebanking efforts. We also thank Brian MacWhinney for helpful discussions.
+
